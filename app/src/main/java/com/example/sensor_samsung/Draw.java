@@ -32,18 +32,17 @@ public class Draw extends View {
         this.canvas = canvas;
         int radius = 100;
         float k = 10F;
-        paint.setColor(Color.argb(127,dx, dy,255));
 //        // Закрашиваем холст
         canvas.drawPaint(paint);
         // Включаем сглаживание
 
         paint.setColor(Color.argb(127,0,0,255));
-        float x_result = dx / k + x;
+        float x_result =  dx / k + x;
         if (x_result < radius)
             x_result = radius;
         if (x_result > getWidth() - radius)
             x_result = getWidth() - radius;
-        float y_result = dy / k + y;
+        float y_result =  - dy / k + y;
         if (y_result < radius)
             y_result = radius;
         if (y_result > getHeight() - radius)
